@@ -36,7 +36,7 @@ function currentLocation(position) {
   let unit = "imperial";
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
 
   axios.get(url).then(showTemp);
 }

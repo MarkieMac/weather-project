@@ -15,7 +15,7 @@ h5 {
   padding: 10px;
   background: linear-gradient(#d9edfd, #fad9fc);
   border-radius: 25px;
-  widows: 500px;
+  max-width: fit-content;
 }
 
 .unit-links {
@@ -25,7 +25,7 @@ h5 {
 .card-body {
   width: 300px;
   position: absolute;
-  right: 260px;
+  right: 415px;
 }
 .card-texts {
   text-align: center;
@@ -48,7 +48,7 @@ h5 {
 input.searchbutton {
   background-color: #ffff;
   border-radius: 10px;
-  color: #00000;
+  color: #f1b7cc;
   border: none;
 }
 
@@ -60,7 +60,7 @@ input.typecity {
   display: flex;
   position: relative;
   top: 200px;
-  left: 180px;
+  left: 50x;
   background: linear-gradient(#2334f7, #f1b7cc);
   list-style-type: none;
   text-align: center;
@@ -72,5 +72,5 @@ input.typecity {
   color: #2334f7;
   position: absolute;
   top: 500px;
-  right: 300px;
+  right: 475px;
 }
