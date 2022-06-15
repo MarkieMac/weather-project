@@ -67,7 +67,16 @@ input.typecity {
 
 .signature {
   color: #2334f7;
-  text-align:center;
+  text-align: center;
   top: 500px;
   right: 475px;
+}
+
+.location {
+  display: block;
+  margin: 0 auto;
+  background-color: #f1b7cc;
+  color: #2334f7;
+  border-radius: 15px;
+  border: none;
 }
