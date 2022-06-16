@@ -56,21 +56,16 @@ input.typecity {
 
 .card-weather {
   display: flex;
+  margin: 0 auto;
   top: 200px;
-  left: 50x;
   background: linear-gradient(#2334f7, #f1b7cc);
   list-style-type: none;
   text-align: center;
   border-radius: 15px;
-  max-width: 300px;
+  max-width: 205px;
 }
 
-.signature {
-  color: #2334f7;
-  text-align: center;
-  top: 500px;
-  right: 475px;
-}
+
 
 .location {
   display: block;
@@ -79,4 +74,11 @@ input.typecity {
   color: #2334f7;
   border-radius: 15px;
   border: none;
+}
+#fahrenheit
+{
+  color:#f1b7cc;
+}
+#celseius {
+  color:#f1b7cc;
 }
