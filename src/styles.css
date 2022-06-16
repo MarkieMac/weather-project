@@ -10,7 +10,7 @@ h5 {
 }
 
 .container {
-  height: 600px;
+  height: 625px;
   padding: 10px;
   background: linear-gradient(#d9edfd, #fad9fc);
   border-radius: 25px;
@@ -76,10 +76,14 @@ input.typecity {
   border-radius: 15px;
   border: none;
 }
-#fahrenheit
+#fahrenheit,
+#celseius
 {
   color:#f1b7cc;
+
+
 }
-#celseius {
-  color:#f1b7cc;
+
+#description {
+  text-transform:capitalize;
 }

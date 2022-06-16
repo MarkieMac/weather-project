@@ -47,12 +47,16 @@ function showTemp(response) {
   let hum = response.data.main.humidity;
   let windy = response.data.wind.speed;
 
+  
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = `${temperature}°`;
 
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${city}`;
 
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+ 
   let humElement = document.querySelector("#hum");
   humElement.innerHTML = `${hum}%`;
 
