@@ -6,7 +6,7 @@ let hours = date.getHours();
 let minutes = date.getMinutes();
 let days =date.getDay();
 
-let day  = [
+days  = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -19,8 +19,7 @@ return `${day} ${hours}:${minutes}`;
 }
 
 
-let dateElement= document.querySelector("h5");
-dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
 
 function search(event) {
   event.preventDefault();
@@ -57,6 +56,9 @@ function showTemp(response) {
 
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${city}`;
+
+  let dateElement= document.querySelector("h5");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);  
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
