@@ -105,24 +105,13 @@ function showTemp(response) {
   humElement.innerHTML = `${hum}%`;
 
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${windy}mph`;
+  windElement.innerHTML = `${windy} mph`;
   
   getForecast(response.data.coord);
 
 }
 
-function search(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = `${searchInput.value}`;
 
-  let apiKey = "2719487ee0b6b73046038ab7b2d43815";
-  let unit = "imperial";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${unit}`;
-
-  axios.get(url).then(showTemp);
-}
 
 function currentLocation(position) { 
   let api = "2719487ee0b6b73046038ab7b2d43815";
@@ -139,40 +128,31 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
-function  showCelseiusTemperature(event){
-  event.preventDefault();
-  let celseiusTemperature= (fahrenheitTemperature-32) / 1.8;
-  let tElement = document.querySelector("#temperature");
-  tElement.innerHTML = Math.round(celseiusTemperature);
-  fahrenheitlink.classList.remove("active");
-  celseiuslink.classList.add("active");
-
-}
-
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let tElement = document.querySelector("#temperature");
-  tElement.innerHTML = Math.round(fahrenheitTemperature);
-  fahrenheitlink.classList.add("active");
-  celseiuslink.classList.remove("active");
-  
-
+function getsearch(city) {
+  let apiKey = "2719487ee0b6b73046038ab7b2d43815";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(showTemp);
 }
 
 
 let currentButton = document.querySelector("#location-button");
 currentButton.addEventListener("click", getCurrentLocation);
 
-let fahrenheitTemperature= null;
 
+function search(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-text-input");
+  let h3 = document.querySelector("h3");
+  h3.innerHTML = `${searchInput.value}`;
+
+  let apiKey = "2719487ee0b6b73046038ab7b2d43815";
+  let unit = "imperial";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${unit}`;
+
+  axios.get(url).then(showTemp);
+}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-let celseiuslink= document.querySelector("#celseiuslink");
-celseiuslink.addEventListener("click", showCelseiusTemperature);
-
-let fahrenheitlink= document.querySelector("#fahrenheitlink");
-fahrenheitlink.addEventListener("click", showFahrenheitTemperature);
-
-
+getsearch("Pflugerville");
