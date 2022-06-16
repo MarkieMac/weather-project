@@ -48,7 +48,7 @@ function showTemp(response) {
   let windy = response.data.wind.speed;
 
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = `${temperature}`;
+  temperatureElement.innerHTML = `${temperature}°`;
 
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${city}`;
