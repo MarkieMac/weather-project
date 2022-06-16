@@ -53,6 +53,7 @@ function showTemp(response) {
   let city = response.data.name;
   let hum = response.data.main.humidity;
   let windy = response.data.wind.speed;
+ 
 
   
   let temperatureElement = document.querySelector("#temperature");
@@ -63,6 +64,9 @@ function showTemp(response) {
   
   let dateElement= document.querySelector("h5");
   dateElement.innerHTML = formatDate(response.data.dt * 1000); 
+  
+  let iconElement= document.querySelector("#icon");
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;

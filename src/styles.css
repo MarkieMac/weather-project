@@ -4,13 +4,9 @@ h5 {
   text-align: center;
 }
 
-.card-text {
-  text-align: center;
-  font-size: 75px;
-}
 
 .container {
-  height: 625px;
+  height: 650px;
   padding: 10px;
   background: linear-gradient(#d9edfd, #fad9fc);
   border-radius: 25px;
@@ -26,7 +22,6 @@ h5 {
   right: 415px;
 }
 .card-texts {
-  text-align: center;
   border-radius: 15px;
   background: linear-gradient(#2334f7, #f1b7cc);
   color: #f4e711;
@@ -76,14 +71,14 @@ input.typecity {
   border-radius: 15px;
   border: none;
 }
+
 #fahrenheit,
-#celseius
-{
+#celseius {
   color:#f1b7cc;
-
-
 }
+
 
 #description {
   text-transform:capitalize;
+ 
 }
