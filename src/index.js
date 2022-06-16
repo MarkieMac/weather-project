@@ -1,10 +1,12 @@
-let now = new Date();
-let h5 = document.querySelector("h5");
+function formatDate(timestamp) {
 
-let hours = now.getHours();
-let minutes = now.getMinutes();
 
-let days = [
+let date = new Date(timestamp);
+let hours = date.getHours();
+let minutes = date.getMinutes();
+let days =date.getDay();
+
+let day  = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -13,10 +15,12 @@ let days = [
   "Friday",
   "Saturday"
 ];
+return `${day} ${hours}:${minutes}`;
+}
 
-let day = days[now.getDay()];
 
-h5.innerHTML = `${day} ${hours}:${minutes}`;
+let dateElement= document.querySelector("h5");
+dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
 function search(event) {
   event.preventDefault();
