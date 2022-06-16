@@ -6,11 +6,12 @@ h5 {
 
 
 .container {
-  height: 650px;
+  height: 575px;
   padding: 10px;
   background: linear-gradient(#d9edfd, #fad9fc);
   border-radius: 25px;
   max-width: fit-content;
+ 
 }
 
 .unit-links {
@@ -21,21 +22,21 @@ h5 {
   width: 300px;
   right: 415px;
 }
-.card-texts {
+.card-body {
   border-radius: 15px;
   background: linear-gradient(#2334f7, #f1b7cc);
   color: #f4e711;
-  padding: 40px;
+  text-align: center;
+  
 }
 
-.emojis {
-  font-size: 35px;
-}
 
 .city {
   display: block;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 10px;
+  
 }
 
 input.searchbutton {
@@ -43,24 +44,12 @@ input.searchbutton {
   border-radius: 10px;
   color: #f1b7cc;
   border: none;
+  
 }
 
 input.typecity {
   color: #2334f7;
 }
-
-.card-weather {
-  display: flex;
-  margin: 0 auto;
-  text-align: center;
-  top: 200px;
-  background: linear-gradient(#2334f7, #f1b7cc);
-  list-style-type: none;
-  border-radius: 10px;
-  max-width: 225px;
-  padding:20px;
-}
-
 
 
 .location {
@@ -97,4 +86,25 @@ input.typecity {
 .card-body .active:hover{
   text-decoration: none;
   
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align:center;
+  color:#2334f7;
+
+}
+
+.weather-forecast-date
+{
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-min {
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }

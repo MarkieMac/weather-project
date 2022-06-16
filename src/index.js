@@ -23,7 +23,35 @@ let day =days[date.getDay()];
 
 return `${day} ${hours}:${minutes}`;
 } 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = ` <div class ="row"> `;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+ 
+  forecastHTML = forecastHTML + `
+  
+    <div class="col-3">
+      <div class="weather-forecast-date">
+     ${day}    </div> 
+      <img 
+      src="http://openweathermap.org/img/wn/50d@2x.png"
+      alt=""
+      width="42"/>
+      <div class-="weather-forecast-temperatures">
+      <span class="weather-forecast-max">89°</span>
+      <span  class="weather-forecast-min">73°</span>
+     
+   
+    </div>
+   </div>
 
+
+`;
+});
+
+forecastElement.innerHTML = forecastHTML;
+}
 
 function search(event) {
   event.preventDefault();
@@ -52,7 +80,7 @@ function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
   let hum = response.data.main.humidity;
-  let windy = response.data.wind.speed;
+  let windy = Math.round(response.data.wind.speed);
  
   fahrenheitTemperature = response.data.main.temp;
   
@@ -117,3 +145,4 @@ let fahrenheitlink= document.querySelector("#fahrenheitlink");
 fahrenheitlink.addEventListener("click", showFahrenheitTemperature);
 
 
+displayForecast();
