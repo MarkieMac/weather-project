@@ -3,22 +3,26 @@ function formatDate(timestamp) {
 
 let date = new Date(timestamp);
 let hours = date.getHours();
+if (hours < 10){
+  hours = `0${minutes}`;}
+ 
 let minutes = date.getMinutes();
-let days =date.getDay();
+if (minutes < 10){
+  minutes = `0${minutes}`;}
 
-days  = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
+let days = 
+["Sunday", 
+"Monday", 
+"Tuesay", 
+"Wednesday", 
+"Thursday", 
+"Friday", 
+"Saturday"];
+let day =days[date.getDay()];
+
+
 return `${day} ${hours}:${minutes}`;
-}
-
-
+} 
 
 
 function search(event) {
@@ -56,9 +60,9 @@ function showTemp(response) {
 
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${city}`;
-
+  
   let dateElement= document.querySelector("h5");
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);  
+  dateElement.innerHTML = formatDate(response.data.dt * 1000); 
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
