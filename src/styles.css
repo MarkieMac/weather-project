@@ -82,3 +82,19 @@ input.typecity {
   text-transform:capitalize;
  
 }
+
+#temperature {
+  font-size: 25px;
+}
+
+.card-body .active{
+  color:#f1b7cc;
+  cursor: default;
+  text-decoration: none;
+
+}
+
+.card-body .active:hover{
+  text-decoration: none;
+  
+}
