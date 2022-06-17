@@ -124,10 +124,7 @@ function currentLocation(position) {
 }
 
 
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(currentLocation);
-}
+
 function getsearch(city) {
   let apiKey = "2719487ee0b6b73046038ab7b2d43815";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -138,7 +135,9 @@ function getsearch(city) {
 let currentButton = document.querySelector("#location-button");
 currentButton.addEventListener("click", getCurrentLocation);
 
-
+function getCurrentLocation(event) {
+  event.preventDefault();
+}
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");
@@ -155,4 +154,7 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-getsearch("Pflugerville");
+getsearch("New York");
+
+
+navigator.geolocation.getCurrentPosition(currentLocation);
