@@ -72,17 +72,8 @@ input.typecity {
   font-size: 25px;
 }
 
-.card-body .active{
-  color:#f1b7cc;
-  cursor: default;
-  text-decoration: none;
 
-}
 
-.card-body .active:hover{
-  text-decoration: none;
-  
-}
 
 .weather-forecast {
   margin-top: 20px;
@@ -105,5 +96,4 @@ input.typecity {
 .weather-forecast-temperatures {
   font-size: 13px;
 }
-
 
