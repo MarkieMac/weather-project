@@ -157,7 +157,8 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
+navigator.geolocation.getCurrentPosition(currentLocation);
 getsearch("New York");
-navigator.geolocation.watchPosition(currentLocation);
+
 
 
