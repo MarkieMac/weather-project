@@ -138,8 +138,11 @@ currentButton.addEventListener("click", getCurrentLocation);
 function getCurrentLocation(event) {
   event.preventDefault();
 }
+
+
 function search(event) {
   event.preventDefault();
+
   let searchInput = document.querySelector("#search-text-input");
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${searchInput.value}`;
@@ -155,6 +158,6 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 getsearch("New York");
-
-
 navigator.geolocation.getCurrentPosition(currentLocation);
+
+
